@@ -1,0 +1,48 @@
+:root {
+  --primaryClr: rgba(0, 0, 0, 0.1);
+  --secondaryClr: rgba(255, 0, 0, 0.8);
+}
+
+#root-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+}
+
+#root-layout header {
+  background-color: var(--primaryClr);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 30px;
+}
+
+#root-layout header img {
+  margin-right: auto;
+  width: 200px;
+}
+
+#root-layout nav {
+  display: flex;
+  gap: 16px;
+}
+#root-layout nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#root-layout nav a:hover {
+  color: aliceblue;
+  scale: 0.95;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+footer {display: none;}
