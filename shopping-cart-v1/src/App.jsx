@@ -14,9 +14,8 @@ import {
 import HomePage from './pages/HomePage'
 import CartPage from './pages/CartPage'
 
-import RootLayout from './layouts/RootLayout'
-
 // layouts
+import RootLayout from './layouts/RootLayout'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -1,26 +1,37 @@
-.cart-card {
-  display: flex;
-  flex-direction: column;
-  background-color: lightslategray;
-  gap: 5px;
-}
-
-.cart-card p {
-  padding: 0;
-  margin: 0;
-}
-
 .cart-cards {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin: 5px;
+  color: black;
+}
+
+.cart-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 240, 230);
+  gap: 5px;
+  margin: 5px;
+  background-color: aliceblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title {
+  text-align: center;
 }
 
 .title {
   font-size: 1.3rem;
 }
 
-.price,
+.unit{
+  align-self: end;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 5px;
+  text-decoration: underline;
+}
+
 .quantity {
   font-size: 1.3;
   font-weight: bold;
@@ -30,20 +41,56 @@
   display: flex;
   justify-content: center;
   gap: 5px;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  align-self: end;
 }
-.quantity span{
-  padding: 0px 5px;
-  border: 1px solid black;
+.quantity span {
+  text-align: center;
+  padding: 0px 7px;
+  border: 1px solid rgb(144, 127, 127);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.quantity span:hover {
+  border: 1px solid gold;
+  scale: 0.9;
 }
 
 .due {
+  display: flex;
+  justify-content: center;
   font-size: 2rem;
-  border: 1px solid gold;
+}
+
+.due p{
+  font-weight: 600;
 }
 
 .due span {
   font-weight: bold;
   color: gold;
+  margin-left: 5px;
 }
 
+.deleteBtn{
+  display: flex;
+  justify-content: end;
+}
 
+.deleteBtn button{
+  width: max-content;
+  background-color: rgb(232, 148, 148);
+  cursor: pointer;
+  border-style: none;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 5px;
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.deleteBtn button:hover{
+  scale: 0.95;
+  background-color: rgb(214, 106, 106);
+}

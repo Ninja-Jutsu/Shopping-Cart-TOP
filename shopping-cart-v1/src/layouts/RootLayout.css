@@ -1,48 +1,55 @@
 :root {
   --primaryClr: rgba(0, 0, 0, 0.1);
   --secondaryClr: rgba(255, 0, 0, 0.8);
+  --primaryBg: rgba(255, 255, 255);
+  --secondaryBg: rgb(225, 238, 235);
 }
 
 #root-layout {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 10% 80% 10%;
+  display: flex;
+  flex-direction: column;
 }
 
-#root-layout header {
-  background-color: var(--primaryClr);
+header {
+  background-color: var(--primaryBg);
   display: flex;
   justify-content: end;
+  height: 15vh;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 30px;
+  padding: 10px 0;
 }
 
-#root-layout header img {
+header .logo {
   margin-right: auto;
-  width: 200px;
 }
 
-#root-layout nav {
+header nav{
   display: flex;
-  gap: 16px;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
 }
-#root-layout nav a {
-  color: white;
+
+nav a{
   text-decoration: none;
+  font-size: 1.5em;
+  color: tomato;
+  font-weight: bold;
 }
 
-#root-layout nav a:hover {
-  color: aliceblue;
-  scale: 0.95;
+/* .cart {
+  position: relative;
 }
 
+.cart span {
+  position: absolute;
+} */
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  background-color: var(--secondaryBg);
 }
 
-
-footer {display: none;}
+footer {
+  background-color: var(--primaryBg);
+  height: 10vh;
+}
