@@ -1,3 +1,34 @@
+main {
+  height: 100%;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+}
+.empty p{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 5rem;
+}
+
+.empty a{
+  width: max-content;
+  margin-left: auto;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: rgb(182, 235, 182);
+  color: black;
+}
+.empty a:hover {
+  scale: 0.95;
+  background-color: rgb(123, 234, 123);
+}
+
 .cart-cards {
   display: flex;
   flex-direction: column;

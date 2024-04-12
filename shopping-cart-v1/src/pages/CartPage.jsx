@@ -2,6 +2,7 @@ import React from 'react'
 import './CartPage.css'
 import { filterArray } from '../useful-func'
 import { ItemsContext } from '../components/ItemsProvider/ItemsProvider'
+import { NavLink } from 'react-router-dom'
 function CartPage() {
   const { items, setItems, setNumOfItems, numOfItems } =
     React.useContext(ItemsContext)
@@ -31,7 +32,7 @@ function CartPage() {
   }
 
   return filtered.length === 0 ? (
-    <div>Empty Cart</div>
+    <div className='empty'><p>Empty Cart</p><NavLink to={'/'}>HomePage</NavLink></div>
   ) : (
     <div className='cart-cards'>
       {filtered.map(({ name, price, pieces, id }, index) => {
@@ -43,7 +44,7 @@ function CartPage() {
             <h2 className='title'>{name}</h2>
             <p className='unit'>Unit Price: ${price}</p>
             <p className='quantity'>
-              {pieces}
+              Quantity: {pieces}
               <span onClick={() => handleAdd(index)}>+</span>
               <span onClick={() => handleMinus(index)}>-</span>
             </p>

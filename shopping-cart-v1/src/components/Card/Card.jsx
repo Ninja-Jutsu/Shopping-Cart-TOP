@@ -4,12 +4,12 @@ import { ItemsContext } from '../ItemsProvider/ItemsProvider.jsx'
 import './Card.css'
 
 function Card({ product, image, title, price }) {
-  const [added, setAdded] = React.useState(false)
   const { items } = React.useContext(ItemsContext)
   const names = items.map((item) => item.name)
 
   return (
-    <section>
+    <section >
+      <span className={names.includes(title) ? 'added' : 'notAdded'}>Added</span>
       <div className='product-img'>
         <img
           src={image}
