@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './App.css'
+import ItemsProvider from './components/ItemsProvider/ItemsProvider'
 
 import {
   Route,
@@ -9,7 +10,7 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom'
 
-//pages 
+//pages
 import Home from './pages/Home'
 import About from './pages/About'
 import RootLayout from './layouts/RootLayout'
@@ -35,7 +36,11 @@ const router = createBrowserRouter(
 )
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <ItemsProvider>
+      <RouterProvider router={router} />
+    </ItemsProvider>
+  )
 }
 
 export default App
