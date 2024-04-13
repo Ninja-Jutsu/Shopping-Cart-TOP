@@ -17,7 +17,7 @@ export default function RootLayout() {
             alt='Foot-Locker Logo'
           />
         </NavLink>
-        <NavLink to='help'>Help</NavLink>
+
         <nav>
           <NavLink to='CartPage'>
             <Cart />
@@ -27,7 +27,9 @@ export default function RootLayout() {
       <main>
         <Outlet />
       </main>
-      <footer>Footer</footer>
+      <footer>
+        <NavLink to='help'>Help</NavLink>
+      </footer>
     </div>
   )
 }

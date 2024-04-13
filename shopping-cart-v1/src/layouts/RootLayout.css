@@ -50,6 +50,14 @@ main {
 }
 
 footer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
   background-color: var(--primaryBg);
   height: 10vh;
+}
+
+footer a{
+  text-decoration: none;
+  font-size: 2rem;
 }
