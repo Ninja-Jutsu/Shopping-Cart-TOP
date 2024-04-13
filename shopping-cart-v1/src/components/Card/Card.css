@@ -1,0 +1,85 @@
+:root {
+  --primaryClr: rgba(0, 0, 0, 0.1);
+  --secondaryClr: rgba(255, 0, 0, 0.8);
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  gap: 16px;
+  font-size: 1.3em;
+  margin: 5px;
+  background-color: aliceblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-img {
+  width: 30%;
+}
+
+.product-title {
+  text-align: center;
+}
+
+.add-form form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  margin-right: auto;
+}
+
+input[type='number'] {
+  color: darkblue;
+  font-weight: bold;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.add-form {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.price {
+  font-size: 2rem;
+  color: gold;
+  text-shadow: 2px 2px rgb(138, 125, 53);
+}
+
+.add-form form button {
+  background: transparent;
+  border: none;
+  background-color: lightgreen;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.add-form form button:hover {
+  scale: 0.95;
+  background-color: rgb(124, 233, 124);
+}
+
+section span{
+  position: absolute;
+  margin-left: auto;
+  top: 0;
+  right: 0;
+}
+
+.notAdded {
+  display: none;
+}
+
+.added{
+  display: block;
+  color: white;
+  background-color: green;
+  border-radius: 8px;
+  padding: 2px 0;
+}

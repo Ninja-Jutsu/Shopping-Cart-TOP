@@ -1,0 +1,45 @@
+.product-details {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+}
+
+#main-header {
+  text-align: center;
+  color: black;
+  border-bottom: 2px solid tomato;
+}
+
+.product-details h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.product-img {
+  align-self: center;
+}
+
+.product-details .price {
+  align-self: end;
+}
+
+.product-details .description{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.product-details .rating {
+    font-size: 0.7rem;
+}
+
+
+.bad {
+  color: red;
+  font-weight: bold;
+}
+
+.good {
+  color: green;
+  font-weight: bold;
+}

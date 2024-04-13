@@ -1,0 +1,67 @@
+.help-outlet {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 2em;
+  color: black;
+  background-color: rgb(224, 218, 210);
+}
+
+.help-outlet h1 {
+  border-bottom: 5px solid tomato;
+}
+
+.helpNav {
+  display: flex;
+  gap: 16px;
+}
+
+.helpNav a {
+  background-color: antiquewhite;
+  padding: 5px;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+}
+
+.helpNav a:hover {
+  scale: 0.95;
+}
+
+.helpNav a.active {
+  border-bottom: 3px solid tomato;
+}
+
+.faq {
+  background-color: antiquewhite;
+}
+
+.faq h3 {
+  border-bottom: 2px solid tomato;
+}
+.faq .question {
+  border: 1px solid black;
+}
+.faq .question p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.received {
+text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form *{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
