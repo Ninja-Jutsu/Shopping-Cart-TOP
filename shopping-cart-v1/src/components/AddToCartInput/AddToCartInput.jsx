@@ -3,7 +3,6 @@ import { ItemsContext } from '../ItemsProvider/ItemsProvider'
 
 function AddToCartInput({ product, ...delegated }) {
   const { items, setItems, setNumOfItems } = React.useContext(ItemsContext)
-  const [addedValue, setAddedValue] = React.useState(1)
   const [value, setValue] = React.useState(1)
 
   function handleSubmit(e) {
@@ -21,7 +20,6 @@ function AddToCartInput({ product, ...delegated }) {
 
     setItems(nextItems)
     setNumOfItems((current) => Number(current) + Number(value))
-    setAddedValue(0)
   }
 
   return (
@@ -37,7 +35,6 @@ function AddToCartInput({ product, ...delegated }) {
         onChange={(e) => {
           let newValue = Number(e.target.value)
           setValue(newValue)
-          setAddedValue(newValue)
         }}
         {...delegated}
       />

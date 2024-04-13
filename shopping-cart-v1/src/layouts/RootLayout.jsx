@@ -8,12 +8,16 @@ export default function RootLayout() {
   return (
     <div id='root-layout'>
       <header>
-        <NavLink className='logo' to='/'>
+        <NavLink
+          className='logo'
+          to='/'
+        >
           <img
             src={logo}
             alt='Foot-Locker Logo'
           />
         </NavLink>
+        <NavLink to='help'>Help</NavLink>
         <nav>
           <NavLink to='CartPage'>
             <Cart />

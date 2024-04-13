@@ -5,6 +5,7 @@ import useSWR from 'swr'
 import Spinner from '../components/Spinner/Spinner'
 import './HomePage.css'
 
+
 const ENDPOINT = 'https://fakestoreapi.com/products/category/electronics'
 
 async function fetcher(endpoint) {
@@ -26,6 +27,7 @@ function HomePage() {
     return <p>Something went wrong!</p>
   }
   if (data) {
+    console.log(data)
     return data.map((product) => {
       return (
         <Card

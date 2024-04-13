@@ -13,9 +13,18 @@ import {
 //pages
 import HomePage from './pages/HomePage'
 import CartPage from './pages/CartPage'
+import Contact from './pages/help/Contact'
+import Faq from './pages/help/Faq'
+import NotFound from './pages/NotFound'
+// import Products, { productsLoader } from './pages/products/Products' //! UNUSED
+import ProductDetails, {
+  productDetailsLoader,
+} from './pages/products/ProductDetails'
 
 // layouts
 import RootLayout from './layouts/RootLayout'
+import HelpLayout from './layouts/HelpLayout'
+import ProductsLayout from './layouts/ProductLayout'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +39,44 @@ const router = createBrowserRouter(
       <Route
         path='CartPage'
         element={<CartPage />}
+      />
+      <Route
+        path='help'
+        element={<HelpLayout />}
+      >
+        <Route
+          path='faq'
+          element={<Faq />}
+        />
+        <Route
+          path='contact'
+          element={<Contact />}
+        />
+      </Route>
+
+      <Route
+        path='products'
+        element={<ProductsLayout />}
+      >
+        {
+          //! UNUSED
+          /* <Route
+          index
+          element={<Products />}
+          loader={productsLoader}
+        /> */
+        }
+
+        <Route
+          path=':id'
+          element={<ProductDetails />}
+          loader={productDetailsLoader}
+        />
+      </Route>
+
+      <Route
+        path='*'
+        element={<NotFound />}
       />
     </Route>
   )
